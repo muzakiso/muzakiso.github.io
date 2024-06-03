@@ -7,7 +7,7 @@ title: 关于我
 
 这个博客托管在GitHub Page，通过cloudflare的cdn加速，以保证国内外的访问速度
 
-主题是来自于大佬TMaize的github开源jekll主题，这里访问[tmaize-blog](https://github.com/TMaize/tmaize-blog)，喜欢的话可以给原作者点个小星星。在[留言板](chat.html)留言即可
+主题是来自于大佬TMaize的github开源jekll主题，这里访问[tmaize-blog](https://github.com/TMaize/tmaize-blog)，喜欢的话可以给原作者点个小星星。
 
 ## 现状
 

@@ -5,7 +5,7 @@ title: Gu-blog
 description: Guyu的个人博客
 keywords: GUyu,Blog,Java,Html,JavaScript
 author: GUyu
-footerText: 'Copyright © 2016 皖ICP备16016174号'
+footerText: ''
 
 # 这些不要动
 permalink: /posts/:year/:month/:day/:title.html
