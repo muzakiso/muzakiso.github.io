@@ -1,6 +1,6 @@
 ---
 layout: mypost
-title: Alpine安装
+title: qemu安装Alpine
 categories: [Linux]
 extMath: false
 ---
