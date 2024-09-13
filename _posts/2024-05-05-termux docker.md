@@ -29,7 +29,11 @@ qemu-system-x86_64 -smp 2 -m 2048 \
   -cdrom alpine-virt-3.15.0-x86_64.iso -boot d \
   -nographic
 ```
-*此时进入alpine安装，具体参考我的alpine安装教程即可*
+*此时进入alpine安装过程，建议参考官方wiki：*
+```
+https://wiki.alpinelinux.org/wiki/Install_Alpine_on_VMware_Workstation
+https://wiki.alpinelinux.org/wiki/Installing_Alpine_in_a_virtual_machine
+```
 4. 编写开机脚本
 ```bash
 nano run.sh
