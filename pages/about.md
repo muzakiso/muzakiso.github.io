@@ -5,7 +5,7 @@ title: 关于我
 
 > Hello 陌生人，欢迎访问 这个博客网站。
 
-本博客托管在GitHub Page，通过cloudflare cdn加速，访问速度还可以。
+本博客托管在GitHub Page，可能访问有些缓慢。
 
 平时喜欢发一点无用的笔记或者心得之类的。
 
