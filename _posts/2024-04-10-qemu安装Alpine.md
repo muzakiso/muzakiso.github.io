@@ -6,7 +6,7 @@ extMath: false
 ---
 
 ### 下载镜像
-虚拟机执行如下命令安装镜像：
+虚拟机执行如下命令安装镜像，也可以安装新一点的镜像：
 ```shell
 wget https://mirrors.aliyun.com/alpine/v3.15/releases/x86_64/alpine-extended-3.15.0-x86_64.iso
 ```
