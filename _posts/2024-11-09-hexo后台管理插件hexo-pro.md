@@ -29,7 +29,7 @@ hexo_pro:
 
 **启动Hexo服务器**。安装完成后，使用以下命令启动Hexo：
    ```bash
-   hexo server -d
+   hexo server -d -p [port]
    ```
 
 ### 使用展示
