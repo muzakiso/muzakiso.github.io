@@ -13,7 +13,7 @@ extMath: false
 1. **确保你已安装Node.js和Hexo**。如果尚未安装，请先访问[Node.js官网](https://nodejs.org/)和[Hexo官网](https://hexo.io/)进行安装。
 2. **使用npm安装hexo-pro**。在你的Hexo项目目录下，打开命令行并输入以下命令：
    ```bash
-   npm install hexo-pro --save
+   npm install hexo-pro
    ```
 
 ### 配置教程
