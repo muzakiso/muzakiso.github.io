@@ -5,7 +5,7 @@ categories: [linux,os]
 extMath: false
 ---
 
->亲爱的读者们，今天我将带你走进Linux的世界，特别是如何在你的Windows电脑上安装Debian GNOME双系统。这不仅是一个技术教程，更是一个探索新操作系统的旅程。让我们开始吧！
+>安装windows和linux双系统其实并不复杂，有时候我们的确有这方面需求，本文将告诉如何在你的Windows电脑上安装Debian GNOME双系统。
 
 ## 1. 背景
 
