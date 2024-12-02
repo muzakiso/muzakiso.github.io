@@ -13,7 +13,7 @@ wget https://mirrors.aliyun.com/alpine/v3.15/releases/x86_64/alpine-extended-3.1
 ### 设置
 设置镜像：
 ```shell
-qemu-img create -f qcow2 alpine.qcow2 20G
+qemu-img create -f qcow2 alpine.qcow2 16G
 qemu-img convert -f raw -O qcow2 alpine-extended-3.15.0-x86_64.iso alpine.qcow2
 qemu-img resize alpine.qcow2 +20G
 qemu-system-x86_64 -m 2048 -cdrom alpine.qcow2 -boot d -enable-kvm -vga std -display sdl -usb -usbdevice tablet -net nic,model=virtio -net user,hostfwd=tcp::2222-:22 -vnc :0
