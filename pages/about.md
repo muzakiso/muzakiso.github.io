@@ -17,6 +17,6 @@ title: 关于我
 
 ## 联系我
 
-- Email&nbsp;: [muzakl@outlook.com](mailto:muzakl@outlook.com)
+- Email&nbsp;: [muzakl@outlook.com](mailto:sb@maxamba.com)
 
 - GitHub: [https://github.com/k33t](https://github.com/k33t)
