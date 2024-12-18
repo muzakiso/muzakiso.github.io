@@ -1,6 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>alpineterm</title>
+    <url>/posts/32e143a8.html</url>
+    <content><![CDATA[<h2 id="AlpineTerm使用教程"><a href="#AlpineTerm使用教程" class="headerlink" title="AlpineTerm使用教程"></a>AlpineTerm使用教程</h2><blockquote>
+<p>上一篇文章介绍了如何使用termux和qemu来搭建alpine虚拟机进而使用docker，而alpineterm是GitHub上面的大神做的封装，使用更加方便</p>
+</blockquote>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>alpineterm可以从GitHub上面进行下载，由于许久没有更新，请下载最新release即可，大概500MB左右</p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><ol>
+<li>升级内核并更新系统<br>通过换源然后执行更新命令即可，初始的版本为3.10，升级过程：3.10－&gt;3.14－&gt;3.18</li>
+</ol>
+<ul>
+<li>换源：vi &#x2F;etc&#x2F;apk&#x2F;repositories</li>
+<li>修改为<a class="link"   href="https://mirrors.ustc.edu.cn/alpine/v3.14/main" >https://mirrors.ustc.edu.cn/alpine/v3.14/main<i class="fas fa-external-link-alt"></i></a>  <a class="link"   href="https://mirrors.ustc.edu.cn/alpine/v3.14/community" >https://mirrors.ustc.edu.cn/alpine/v3.14/community<i class="fas fa-external-link-alt"></i></a></li>
+<li>更换dns： vi &#x2F;etc&#x2F;resolv.conf 修改为nameserver 8.8.8.8和8.8.4.4</li>
+<li>更新：apk update &amp;&amp; apk upgrade –available</li>
+<li>重置：sync &amp;&amp; reboot</li>
+<li>检查内核：cat &#x2F;etc&#x2F;os-release &amp;&amp; uname -r<br><em>重复执行上面的命令以后，直至看到系统版本为3.18即可</em></li>
+</ul>
+<ol start="2">
+<li>安装docker<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apk add docker</span><br><span class="line">service docker start</span><br><span class="line">rc-update add docker boot</span><br></pre></td></tr></table></figure></li>
+<li>修改映射端口<br>当安装的容器需要通过端口访问时，由于无法直接访问qemu虚拟机的端口，因此我们需要端口映射，具体如下：</li>
+</ol>
+<ul>
+<li>打开侧边栏选择qemu</li>
+<li>执行命令hostfwd_add tcp::5700-:5700，修改为你想要映射的端口即可</li>
+<li>通过主机的端口即可访问</li>
+</ul>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>2FA软件怎么用</title>
     <url>/posts/acc8358a.html</url>
     <content><![CDATA[<blockquote>
@@ -35,38 +70,64 @@
       </tags>
   </entry>
   <entry>
-    <title>alpineterm</title>
-    <url>/posts/32e143a8.html</url>
-    <content><![CDATA[<h2 id="AlpineTerm使用教程"><a href="#AlpineTerm使用教程" class="headerlink" title="AlpineTerm使用教程"></a>AlpineTerm使用教程</h2><blockquote>
-<p>上一篇文章介绍了如何使用termux和qemu来搭建alpine虚拟机进而使用docker，而alpineterm是GitHub上面的大神做的封装，使用更加方便</p>
-</blockquote>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>alpineterm可以从GitHub上面进行下载，由于许久没有更新，请下载最新release即可，大概500MB左右</p>
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><ol>
-<li>升级内核并更新系统<br>通过换源然后执行更新命令即可，初始的版本为3.10，升级过程：3.10－&gt;3.14－&gt;3.18</li>
-</ol>
-<ul>
-<li>换源：vi &#x2F;etc&#x2F;apk&#x2F;repositories</li>
-<li>修改为<a class="link"   href="https://mirrors.ustc.edu.cn/alpine/v3.14/main" >https://mirrors.ustc.edu.cn/alpine/v3.14/main<i class="fas fa-external-link-alt"></i></a>  <a class="link"   href="https://mirrors.ustc.edu.cn/alpine/v3.14/community" >https://mirrors.ustc.edu.cn/alpine/v3.14/community<i class="fas fa-external-link-alt"></i></a></li>
-<li>更换dns： vi &#x2F;etc&#x2F;resolv.conf 修改为nameserver 8.8.8.8和8.8.4.4</li>
-<li>更新：apk update &amp;&amp; apk upgrade –available</li>
-<li>重置：sync &amp;&amp; reboot</li>
-<li>检查内核：cat &#x2F;etc&#x2F;os-release &amp;&amp; uname -r<br><em>重复执行上面的命令以后，直至看到系统版本为3.18即可</em></li>
-</ul>
-<ol start="2">
-<li>安装docker<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apk add docker</span><br><span class="line">service docker start</span><br><span class="line">rc-update add docker boot</span><br></pre></td></tr></table></figure></li>
-<li>修改映射端口<br>当安装的容器需要通过端口访问时，由于无法直接访问qemu虚拟机的端口，因此我们需要端口映射，具体如下：</li>
-</ol>
-<ul>
-<li>打开侧边栏选择qemu</li>
-<li>执行命令hostfwd_add tcp::5700-:5700，修改为你想要映射的端口即可</li>
-<li>通过主机的端口即可访问</li>
-</ul>
+    <title>Hello World</title>
+    <url>/posts/4a17b156.html</url>
+    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo<i class="fas fa-external-link-alt"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation<i class="fas fa-external-link-alt"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting<i class="fas fa-external-link-alt"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub<i class="fas fa-external-link-alt"></i></a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing<i class="fas fa-external-link-alt"></i></a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server<i class="fas fa-external-link-alt"></i></a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating<i class="fas fa-external-link-alt"></i></a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment<i class="fas fa-external-link-alt"></i></a></p>
 ]]></content>
       <categories>
-        <category>linux</category>
+        <category>dev</category>
       </categories>
       <tags>
-        <tag>linux</tag>
+        <tag>dev</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>cmd增强工具——clink</title>
+    <url>/posts/43a9fa83.html</url>
+    <content><![CDATA[<blockquote>
+<p>作为一个喜欢折腾各种花里胡哨东西的人，我每次都会花费大量时间在这上面。cmd作为windows一个很重要的组成部分，很多时候我们都会应用到它。与新出的powershell相比，cmd的功能肯定是没有那么强大的，但其重要性绝对不输给pwsh。但是cmd真的很简单，没有命令补全，也没有这么多的快捷键，功能特性等。我偶然在github上发现了clink这个工具，在使用过程中也遇到过一些问题，因此想在这里总结一下。</p>
+</blockquote>
+<h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h2><p>安装clink可以自己手动安装，也可以通过包管理工具安装（<strong>推荐前者</strong>）</p>
+<h3 id="1-1包管理工具安装"><a href="#1-1包管理工具安装" class="headerlink" title="1.1包管理工具安装"></a>1.1包管理工具安装</h3><p><code>winget install clink</code> winget安装<br><code>scoop install clink</code> scoop安装</p>
+<h3 id="1-2手动安装"><a href="#1-2手动安装" class="headerlink" title="1.2手动安装"></a>1.2手动安装</h3><p>从<a class="link"   href="https://chrisant996.github.io/clink/"  title="clink官方网站">clink官方网站<i class="fas fa-external-link-alt"></i></a>下载<code>.zip</code>安装文件或者<code>.setup.exe</code>安装文件（<strong>推荐前者</strong>）</p>
+<h3 id="1-3安装注意事项"><a href="#1-3安装注意事项" class="headerlink" title="1.3安装注意事项"></a>1.3安装注意事项</h3><p>如果选择的是.exe安装，记得勾选<code>Autorun when cmd.exe starts</code>和<code>Use enhanced default settings</code>，前者会帮你自动将clinks插入到cmd中，而后者可以帮你进行一些默认的配置，避免自己配置的时候有一些问题。</p>
+<h2 id="2-使用"><a href="#2-使用" class="headerlink" title="2.使用"></a>2.使用</h2><p>如果是通过<code>.setup.exe</code>文件安装的，如果你没有进一步配置的想法，你已经可以正常的使用了。</p>
+<hr>
+<p>通过<code>.zip</code>压缩文件安装或者包管理工具安装的，需要进行一些配置才能正常使用clink,因为一些功能没有配置完全。这里我们可以直接参考<a class="link"   href="https://chrisant996.github.io/clink/clink.htm"  title="官方文档">官方文档<i class="fas fa-external-link-alt"></i></a>。<br>首先在cmd中输入<code>clink</code>，如果提示未找到命令，那就是需要配置环境变量了。<br>然后你需要在cmd中输入<code>clink autorun install</code>来将clink注入到cmd中，这样每次你打开cmd的时候clink就会加载了。</p>
+<hr>
+<p>然后，你需要检查自己的用户文件夹(C:\Users\Username)下面是否有.inputrc文件，一般是没有的，但是如果你下载过git for windows或者其他类似的命令行软件，就会出现这个文件，这个文件可以看作是cmd的配置文件吧，根据官方文档，你需要在其中输入以下命令:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Some common Readline config settings.</span><br><span class="line"></span><br><span class="line">set colored-stats                 on   # Turn on completion colors.</span><br><span class="line">set colored-completion-prefix     on   # Color the typed completion prefix.</span><br><span class="line"></span><br><span class="line"># Some config settings that only work in Clink.</span><br><span class="line"></span><br><span class="line">$if clink</span><br><span class="line">set search-ignore-case            on   # Case insensitive history searches.</span><br><span class="line">set completion-auto-query-items   on   # Prompt before showing completions if they&#x27;ll exceed half the screen.</span><br><span class="line">$endif</span><br><span class="line"></span><br><span class="line"># Add your keybindings here...</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>这里面包括显示颜色以及显示补全提示的相关配置。</p>
+<h2 id="3-配置个性化"><a href="#3-配置个性化" class="headerlink" title="3.配置个性化"></a>3.配置个性化</h2><p>经过上面的配置，你的cmd已经很强大了，下面是进一步进行个性化设置。</p>
+<h3 id="3-1修改clink相关配置"><a href="#3-1修改clink相关配置" class="headerlink" title="3.1修改clink相关配置"></a>3.1修改clink相关配置</h3><p>通过<code>clink info</code>,我们可以发现clink的配置文件在C:\Users\Username\AppData\Local\clink文件夹下，通过编辑clink_setting这个文件，我们可以修改输入命令的各种颜色配置，推荐阅读<a class="link"   href="https://chrisant996.github.io/clink/clink.html#coloring-the-input-text"  title="颜色配置">clink颜色配置<i class="fas fa-external-link-alt"></i></a></p>
+<hr>
+<p>通过<code>clink set</code>命令，我们可以看到所有的配置选项，因此你也可以直接通过命令进行配置</p>
+<h3 id="3-2通过脚本进行扩展"><a href="#3-2通过脚本进行扩展" class="headerlink" title="3.2通过脚本进行扩展"></a>3.2通过脚本进行扩展</h3><p>你可以通过<code>clink installscripts</code>命令来指定你的脚本路径，否则会默认把你的C:\Users\Username\AppData\Local\clink文件夹当成脚本路径。在这个路径下，你可以编写一些lua脚本或者创建一个clink_start.cmd文件，因为每次clink加载的时候都会默认加载.lua文件和clink_start.cmd文件，因此你可以用它们实现一些例如doskey别名持久化的功能。</p>
+<h3 id="3-3美化命令提示符prompt"><a href="#3-3美化命令提示符prompt" class="headerlink" title="3.3美化命令提示符prompt"></a>3.3美化命令提示符prompt</h3><p>clink使cmd可以像powershell那样通过配置命令提示符来增强显示。这里推荐三个美化的选项:<br><code>starthip</code> 一个简约美观的prompt美化<br><code>oh-my-posh</code> 一个强大但是速度稍慢的工具<br><code>clink-flex-prompt</code> 很适合clink的prompt工具<br>这些工具都可以直接在搜索引擎上搜到，建议根据文档配置</p>
+<h2 id="4-总结"><a href="#4-总结" class="headerlink" title="4.总结"></a>4.总结</h2><p>clink是一个很好的工具，配置相对有点多，我觉得速度还是很快的，尽管每次打开cmd都要加载clink，但是clink的扩展性很强，可以满足很多需求。</p>
+]]></content>
+      <categories>
+        <category>windows</category>
+      </categories>
+      <tags>
+        <tag>shell</tag>
+        <tag>prompt</tag>
+        <tag>windows</tag>
       </tags>
   </entry>
   <entry>
@@ -224,67 +285,6 @@
       <tags>
         <tag>git</tag>
         <tag>技能</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>cmd增强工具——clink</title>
-    <url>/posts/43a9fa83.html</url>
-    <content><![CDATA[<blockquote>
-<p>作为一个喜欢折腾各种花里胡哨东西的人，我每次都会花费大量时间在这上面。cmd作为windows一个很重要的组成部分，很多时候我们都会应用到它。与新出的powershell相比，cmd的功能肯定是没有那么强大的，但其重要性绝对不输给pwsh。但是cmd真的很简单，没有命令补全，也没有这么多的快捷键，功能特性等。我偶然在github上发现了clink这个工具，在使用过程中也遇到过一些问题，因此想在这里总结一下。</p>
-</blockquote>
-<h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h2><p>安装clink可以自己手动安装，也可以通过包管理工具安装（<strong>推荐前者</strong>）</p>
-<h3 id="1-1包管理工具安装"><a href="#1-1包管理工具安装" class="headerlink" title="1.1包管理工具安装"></a>1.1包管理工具安装</h3><p><code>winget install clink</code> winget安装<br><code>scoop install clink</code> scoop安装</p>
-<h3 id="1-2手动安装"><a href="#1-2手动安装" class="headerlink" title="1.2手动安装"></a>1.2手动安装</h3><p>从<a class="link"   href="https://chrisant996.github.io/clink/"  title="clink官方网站">clink官方网站<i class="fas fa-external-link-alt"></i></a>下载<code>.zip</code>安装文件或者<code>.setup.exe</code>安装文件（<strong>推荐前者</strong>）</p>
-<h3 id="1-3安装注意事项"><a href="#1-3安装注意事项" class="headerlink" title="1.3安装注意事项"></a>1.3安装注意事项</h3><p>如果选择的是.exe安装，记得勾选<code>Autorun when cmd.exe starts</code>和<code>Use enhanced default settings</code>，前者会帮你自动将clinks插入到cmd中，而后者可以帮你进行一些默认的配置，避免自己配置的时候有一些问题。</p>
-<h2 id="2-使用"><a href="#2-使用" class="headerlink" title="2.使用"></a>2.使用</h2><p>如果是通过<code>.setup.exe</code>文件安装的，如果你没有进一步配置的想法，你已经可以正常的使用了。</p>
-<hr>
-<p>通过<code>.zip</code>压缩文件安装或者包管理工具安装的，需要进行一些配置才能正常使用clink,因为一些功能没有配置完全。这里我们可以直接参考<a class="link"   href="https://chrisant996.github.io/clink/clink.htm"  title="官方文档">官方文档<i class="fas fa-external-link-alt"></i></a>。<br>首先在cmd中输入<code>clink</code>，如果提示未找到命令，那就是需要配置环境变量了。<br>然后你需要在cmd中输入<code>clink autorun install</code>来将clink注入到cmd中，这样每次你打开cmd的时候clink就会加载了。</p>
-<hr>
-<p>然后，你需要检查自己的用户文件夹(C:\Users\Username)下面是否有.inputrc文件，一般是没有的，但是如果你下载过git for windows或者其他类似的命令行软件，就会出现这个文件，这个文件可以看作是cmd的配置文件吧，根据官方文档，你需要在其中输入以下命令:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Some common Readline config settings.</span><br><span class="line"></span><br><span class="line">set colored-stats                 on   # Turn on completion colors.</span><br><span class="line">set colored-completion-prefix     on   # Color the typed completion prefix.</span><br><span class="line"></span><br><span class="line"># Some config settings that only work in Clink.</span><br><span class="line"></span><br><span class="line">$if clink</span><br><span class="line">set search-ignore-case            on   # Case insensitive history searches.</span><br><span class="line">set completion-auto-query-items   on   # Prompt before showing completions if they&#x27;ll exceed half the screen.</span><br><span class="line">$endif</span><br><span class="line"></span><br><span class="line"># Add your keybindings here...</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>这里面包括显示颜色以及显示补全提示的相关配置。</p>
-<h2 id="3-配置个性化"><a href="#3-配置个性化" class="headerlink" title="3.配置个性化"></a>3.配置个性化</h2><p>经过上面的配置，你的cmd已经很强大了，下面是进一步进行个性化设置。</p>
-<h3 id="3-1修改clink相关配置"><a href="#3-1修改clink相关配置" class="headerlink" title="3.1修改clink相关配置"></a>3.1修改clink相关配置</h3><p>通过<code>clink info</code>,我们可以发现clink的配置文件在C:\Users\Username\AppData\Local\clink文件夹下，通过编辑clink_setting这个文件，我们可以修改输入命令的各种颜色配置，推荐阅读<a class="link"   href="https://chrisant996.github.io/clink/clink.html#coloring-the-input-text"  title="颜色配置">clink颜色配置<i class="fas fa-external-link-alt"></i></a></p>
-<hr>
-<p>通过<code>clink set</code>命令，我们可以看到所有的配置选项，因此你也可以直接通过命令进行配置</p>
-<h3 id="3-2通过脚本进行扩展"><a href="#3-2通过脚本进行扩展" class="headerlink" title="3.2通过脚本进行扩展"></a>3.2通过脚本进行扩展</h3><p>你可以通过<code>clink installscripts</code>命令来指定你的脚本路径，否则会默认把你的C:\Users\Username\AppData\Local\clink文件夹当成脚本路径。在这个路径下，你可以编写一些lua脚本或者创建一个clink_start.cmd文件，因为每次clink加载的时候都会默认加载.lua文件和clink_start.cmd文件，因此你可以用它们实现一些例如doskey别名持久化的功能。</p>
-<h3 id="3-3美化命令提示符prompt"><a href="#3-3美化命令提示符prompt" class="headerlink" title="3.3美化命令提示符prompt"></a>3.3美化命令提示符prompt</h3><p>clink使cmd可以像powershell那样通过配置命令提示符来增强显示。这里推荐三个美化的选项:<br><code>starthip</code> 一个简约美观的prompt美化<br><code>oh-my-posh</code> 一个强大但是速度稍慢的工具<br><code>clink-flex-prompt</code> 很适合clink的prompt工具<br>这些工具都可以直接在搜索引擎上搜到，建议根据文档配置</p>
-<h2 id="4-总结"><a href="#4-总结" class="headerlink" title="4.总结"></a>4.总结</h2><p>clink是一个很好的工具，配置相对有点多，我觉得速度还是很快的，尽管每次打开cmd都要加载clink，但是clink的扩展性很强，可以满足很多需求。</p>
-]]></content>
-      <categories>
-        <category>windows</category>
-      </categories>
-      <tags>
-        <tag>shell</tag>
-        <tag>prompt</tag>
-        <tag>windows</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/posts/4a17b156.html</url>
-    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo<i class="fas fa-external-link-alt"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation<i class="fas fa-external-link-alt"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting<i class="fas fa-external-link-alt"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub<i class="fas fa-external-link-alt"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment<i class="fas fa-external-link-alt"></i></a></p>
-]]></content>
-      <categories>
-        <category>dev</category>
-      </categories>
-      <tags>
-        <tag>dev</tag>
-        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -944,6 +944,40 @@
       </tags>
   </entry>
   <entry>
+    <title>Welcome to use Hexo Theme Keep</title>
+    <url>/posts/892af2b6.html</url>
+    <content><![CDATA[<p>Welcome to use Hexo Theme Keep.</p>
+<p>This is your very first post. Check <a class="link"   href="https://keep-docs.xpoet.cn/" >documentation<i class="fas fa-external-link-alt"></i></a> for more info. If you get any problems when using Keep theme, you can ask me on <a class="link"   href="https://github.com/XPoet/hexo-theme-keep/issues" >GitHub<i class="fas fa-external-link-alt"></i></a>.</p>
+<span id="more"></span>
+
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="/images/keep-slogan.svg"
+                        alt="keep-slogan"
+                 ></p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing<i class="fas fa-external-link-alt"></i></a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server<i class="fas fa-external-link-alt"></i></a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating<i class="fas fa-external-link-alt"></i></a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment<i class="fas fa-external-link-alt"></i></a></p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>Keep</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>termux docker</title>
     <url>/posts/e344457.html</url>
     <content><![CDATA[<h3 id="操作前提"><a href="#操作前提" class="headerlink" title="操作前提"></a>操作前提</h3><p>由于大部分手机的内核并不满足使用docker的要求，因此需要用root权限修改手机部分kernel来满足，但是手机root并不适用所有手机，而且root也有一定的风险，因此使用termux终端来通过qemu虚拟机进行容器化操作可以实现满足docker运行的要求。</p>
@@ -1117,40 +1151,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Welcome to use Hexo Theme Keep</title>
-    <url>/posts/892af2b6.html</url>
-    <content><![CDATA[<p>Welcome to use Hexo Theme Keep.</p>
-<p>This is your very first post. Check <a class="link"   href="https://keep-docs.xpoet.cn/" >documentation<i class="fas fa-external-link-alt"></i></a> for more info. If you get any problems when using Keep theme, you can ask me on <a class="link"   href="https://github.com/XPoet/hexo-theme-keep/issues" >GitHub<i class="fas fa-external-link-alt"></i></a>.</p>
-<span id="more"></span>
-
-<p><img  
-                       lazyload
-                       alt="image"
-                       data-src="/images/keep-slogan.svg"
-                        alt="keep-slogan"
-                 ></p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment<i class="fas fa-external-link-alt"></i></a></p>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>Keep</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>zsh美化教程</title>
     <url>/posts/ecc5fe2a.html</url>
     <content><![CDATA[<h2 id="zsh美化教程"><a href="#zsh美化教程" class="headerlink" title="zsh美化教程"></a>zsh美化教程</h2><h3 id="debian安装zsh并配置"><a href="#debian安装zsh并配置" class="headerlink" title="debian安装zsh并配置"></a>debian安装zsh并配置</h3><ul>
@@ -1194,6 +1194,26 @@
       </tags>
   </entry>
   <entry>
+    <title>我的图床思考</title>
+    <url>/posts/dfa8dfea.html</url>
+    <content><![CDATA[<h2 id="1-现状"><a href="#1-现状" class="headerlink" title="1.现状"></a>1.现状</h2><p>免费的图床一大把，但是这么多网上的图床，很难说哪一个能做到一直稳定运营下去，建议还是用自建图床的方法，免费的图床只用来作为备用</p>
+<h2 id="2-图床搭配和选择"><a href="#2-图床搭配和选择" class="headerlink" title="2.图床搭配和选择"></a>2.图床搭配和选择</h2><p>尽管免费的图床很多都跑路的很快(有的甚至你今天注册，明天就跑路)，但还是有大量免费的图床等待我们去使用，尽情的白嫖。具体来说有一下几种类型：<br></p>
+<ol>
+<li>网上直接搜的</li>
+<li>GitHub上找</li>
+<li>自建，例如PicGo和jsdelivr+GitHub这种</li>
+</ol>
+<h2 id="3-自建图床"><a href="#3-自建图床" class="headerlink" title="3.自建图床"></a>3.自建图床</h2><p>自建图床有以下几种：<br>1.用大厂的oss对象存储服务<br>2.服务器搭建图床程序，用服务器来搭建图床</p>
+]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>jekll</tag>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>内存解决</title>
     <url>/posts/5e03229e.html</url>
     <content><![CDATA[<h3 id="服务器内存爆满的解决办法"><a href="#服务器内存爆满的解决办法" class="headerlink" title="服务器内存爆满的解决办法"></a>服务器内存爆满的解决办法</h3><blockquote>
@@ -1225,26 +1245,6 @@
       <tags>
         <tag>操作系统</tag>
         <tag>运维</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我的图床思考</title>
-    <url>/posts/dfa8dfea.html</url>
-    <content><![CDATA[<h2 id="1-现状"><a href="#1-现状" class="headerlink" title="1.现状"></a>1.现状</h2><p>免费的图床一大把，但是这么多网上的图床，很难说哪一个能做到一直稳定运营下去，建议还是用自建图床的方法，免费的图床只用来作为备用</p>
-<h2 id="2-图床搭配和选择"><a href="#2-图床搭配和选择" class="headerlink" title="2.图床搭配和选择"></a>2.图床搭配和选择</h2><p>尽管免费的图床很多都跑路的很快(有的甚至你今天注册，明天就跑路)，但还是有大量免费的图床等待我们去使用，尽情的白嫖。具体来说有一下几种类型：<br></p>
-<ol>
-<li>网上直接搜的</li>
-<li>GitHub上找</li>
-<li>自建，例如PicGo和jsdelivr+GitHub这种</li>
-</ol>
-<h2 id="3-自建图床"><a href="#3-自建图床" class="headerlink" title="3.自建图床"></a>3.自建图床</h2><p>自建图床有以下几种：<br>1.用大厂的oss对象存储服务<br>2.服务器搭建图床程序，用服务器来搭建图床</p>
-]]></content>
-      <categories>
-        <category>blog</category>
-      </categories>
-      <tags>
-        <tag>jekll</tag>
-        <tag>教程</tag>
       </tags>
   </entry>
 </search>
