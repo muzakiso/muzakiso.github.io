@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>2FA软件怎么用</title>
+    <url>/posts/acc8358a.html</url>
+    <content><![CDATA[<blockquote>
+<p>现在主流的软件和网站，例如github，微软登录，google登录，twitter登录，都支持2FA，即双重身份验证，即登录时除了传统的用户名密码，还要输入一个额外的验证码。这个验证码一般是totp，即时间戳，通过手机上的应用软件生成。在这个背景下，我简单的总结了一下2FA软件怎么用。</p>
+</blockquote>
+<h3 id="原理介绍"><a href="#原理介绍" class="headerlink" title="原理介绍"></a>原理介绍</h3><p>在网站开启2FA验证后，会在登录页面出现一个二维码或者一段代码，用户在2FA软件中扫描二维码或者输入后，就可以把对应的账号绑定到软件中，然后就可以在登录的时候选择使用2FA验证。这个验证是不需要网络的，因此即使使用2FA软件的手机没有网络，也可以使用2FA验证。</p>
+<h3 id="2FA软件推荐"><a href="#2FA软件推荐" class="headerlink" title="2FA软件推荐"></a>2FA软件推荐</h3><p>下面是我总结的一些2FA软件，可以根据自己的需求选择：</p>
+<ol>
+<li>Microsoft Authticator</li>
+<li>Google Authticator</li>
+<li>Authenticator Pro: open source</li>
+<li>vaultwarden: open source</li>
+<li>1password</li>
+<li>2FAS: open source</li>
+<li>keepass: open source</li>
+<li>Aegis: open source</li>
+<li>OneAuth</li>
+<li>Authy<br>如果你需要联网同步，那么推荐使用google和微软的，如果喜欢本地存储，那么推荐使用Authenticator Pro或者Aegis这类的开源项目。</li>
+</ol>
+<h3 id="账号丢失风险"><a href="#账号丢失风险" class="headerlink" title="账号丢失风险"></a>账号丢失风险</h3><p>虽然2FA加强了账号的安全性，但是如果2FA设备出现问题了，那么2FA就无法工作了，那么如何解决呢？</p>
+<ul>
+<li>首先是通过恢复密钥，这个是一个字符串，这个字符串是存储在2FA设备上的，如果丢失了，那么可以通过恢复密钥来恢复账号。</li>
+<li>多做备份，建议每周做一次备份，存储到网盘或者移动硬盘上。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>system</category>
+      </categories>
+      <tags>
+        <tag>电脑安全</tag>
+        <tag>工具</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>alpineterm</title>
     <url>/posts/32e143a8.html</url>
     <content><![CDATA[<h2 id="AlpineTerm使用教程"><a href="#AlpineTerm使用教程" class="headerlink" title="AlpineTerm使用教程"></a>AlpineTerm使用教程</h2><blockquote>
@@ -36,62 +70,42 @@
       </tags>
   </entry>
   <entry>
-    <title>2FA软件怎么用</title>
-    <url>/posts/acc8358a.html</url>
+    <title>通过git备份和进行迭代项目代码</title>
+    <url>/posts/c9f9f4c7.html</url>
     <content><![CDATA[<blockquote>
-<p>现在主流的软件和网站，例如github，微软登录，google登录，twitter登录，都支持2FA，即双重身份验证，即登录时除了传统的用户名密码，还要输入一个额外的验证码。这个验证码一般是totp，即时间戳，通过手机上的应用软件生成。在这个背景下，我简单的总结了一下2FA软件怎么用。</p>
+<p>在本地进行项目开发时，由于代码需要进行多次迭代，因此备份代码是不可缺少的。因此使用版本控制系统来进行代码备份是很有必要的。本文将介绍有关git配置gitee以及github的相关内容，并对一些问题做出相应解释。</p>
 </blockquote>
-<h3 id="原理介绍"><a href="#原理介绍" class="headerlink" title="原理介绍"></a>原理介绍</h3><p>在网站开启2FA验证后，会在登录页面出现一个二维码或者一段代码，用户在2FA软件中扫描二维码或者输入后，就可以把对应的账号绑定到软件中，然后就可以在登录的时候选择使用2FA验证。这个验证是不需要网络的，因此即使使用2FA软件的手机没有网络，也可以使用2FA验证。</p>
-<h3 id="2FA软件推荐"><a href="#2FA软件推荐" class="headerlink" title="2FA软件推荐"></a>2FA软件推荐</h3><p>下面是我总结的一些2FA软件，可以根据自己的需求选择：</p>
-<ol>
-<li>Microsoft Authticator</li>
-<li>Google Authticator</li>
-<li>Authenticator Pro: open source</li>
-<li>vaultwarden: open source</li>
-<li>1password</li>
-<li>2FAS: open source</li>
-<li>keepass: open source</li>
-<li>Aegis: open source</li>
-<li>OneAuth</li>
-<li>Authy<br>如果你需要联网同步，那么推荐使用google和微软的，如果喜欢本地存储，那么推荐使用Authenticator Pro或者Aegis这类的开源项目。</li>
-</ol>
-<h3 id="账号丢失风险"><a href="#账号丢失风险" class="headerlink" title="账号丢失风险"></a>账号丢失风险</h3><p>虽然2FA加强了账号的安全性，但是如果2FA设备出现问题了，那么2FA就无法工作了，那么如何解决呢？</p>
+<h1 id="1-git工具"><a href="#1-git工具" class="headerlink" title="1.git工具"></a>1.git工具</h1><h2 id="1-1-git介绍"><a href="#1-1-git介绍" class="headerlink" title="1.1 git介绍"></a>1.1 git介绍</h2><p>Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。git可以在多种操作系统中安装。通过git可以在本地新建仓库并与远端仓库进行连接。git在本地的工作流程分为<code>工作区</code> <code>暂存区</code> <code>版本库</code>，通过这三部分可以对项目进行很好的版本控制与代码迭代。</p>
+<h2 id="1-2-git安装"><a href="#1-2-git安装" class="headerlink" title="1.2 git安装"></a>1.2 git安装</h2><p>windows安装教程推荐<a class="link"   href="https://blog.csdn.net/mukes/article/details/115693833" >git详细安装教程<i class="fas fa-external-link-alt"></i></a>，这大概是我见过最详细的教程了。<br><br><br>macOS如果安装 Homebrew，可以通过以下命令来安装：</p>
+<figure class="highlight zsh"><table><tr><td class="code"><pre><span class="line">brew install git</span><br></pre></td></tr></table></figure>
+<p>也可以前往Git官网下载 macOS 版本的安装包并按照说明进行安装。<br><br><br>Linux通过对应的安装包命令进行安装即可，例如:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install git -y</span><br></pre></td></tr></table></figure>
+<h2 id="1-3-git的简单使用"><a href="#1-3-git的简单使用" class="headerlink" title="1.3 git的简单使用"></a>1.3 git的简单使用</h2><p>git可以通过命令行来进行使用，也可以使用类似<code>Github desktop</code> <code>Git GUI</code>这样的图形化工具来进行使用，推荐先了解了解git的命令再去使用图形化工具，这样可以加深对分布式版本控制系统的理解。git的使用过程不是本文的重点，因此不在此过多赘述，详细的内容推荐通过菜鸟教程网站以及b站相关视频进行学习。<br>简单常用git命令:</p>
 <ul>
-<li>首先是通过恢复密钥，这个是一个字符串，这个字符串是存储在2FA设备上的，如果丢失了，那么可以通过恢复密钥来恢复账号。</li>
-<li>多做备份，建议每周做一次备份，存储到网盘或者移动硬盘上。</li>
+<li>git clone repo</li>
+<li>git add .</li>
+<li>git commit -m ‘information’</li>
+<li>git push origin master</li>
 </ul>
+<h1 id="2-git配置github和gitee"><a href="#2-git配置github和gitee" class="headerlink" title="2.git配置github和gitee"></a>2.git配置github和gitee</h1><h2 id="2-1-设置全局用户名和邮箱"><a href="#2-1-设置全局用户名和邮箱" class="headerlink" title="2.1 设置全局用户名和邮箱"></a>2.1 设置全局用户名和邮箱</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name  &quot;name&quot;//用户名</span><br><span class="line">$ git config --global user.email &quot;xxx@xxx.com&quot;//邮箱</span><br></pre></td></tr></table></figure>
+<p>这里的用户名和邮箱就是你GitHub的，好像也可以不同，不过提交的时候信息可能会出问题</p>
+<h2 id="2-2-创建ssh-key"><a href="#2-2-创建ssh-key" class="headerlink" title="2.2 创建ssh key"></a>2.2 创建ssh key</h2><p>在git bash里面输入如下命令:<br><code>$ ssh-keygen -t rsa -C &quot;xxx@xxx.com&quot;</code><br>邮箱还是对应的上面的邮箱，输入命令后需要连续三次回车，这样可以设置免ssh密码登录</p>
+<h2 id="2-3-在GitHub里面绑定ssh-key"><a href="#2-3-在GitHub里面绑定ssh-key" class="headerlink" title="2.3 在GitHub里面绑定ssh key"></a>2.3 在GitHub里面绑定ssh key</h2><p>上面生成的ssh密钥可以在<code>users/用户名/.ssh</code>文件夹里面找到，点击资源管理器上面的查看显示隐藏文件就可以看到.ssh文件夹了。<br>复制id_rsa.pub里面的内容，打开GitHub，在Account settings页面选择SSH Keys，添加New ssh keys，名称随意，将复制的公钥内容粘贴进去。</p>
+<h2 id="2-4-验证"><a href="#2-4-验证" class="headerlink" title="2.4 验证"></a>2.4 验证</h2><p>输入如下命令验证：<br><code>$ ssh -T git@github.com</code><br>出现提示，输入yes，然后底下出现欢迎信息，即为成功。</p>
+<h2 id="2-5-gitee配置"><a href="#2-5-gitee配置" class="headerlink" title="2.5 gitee配置"></a>2.5 gitee配置</h2><p>上面介绍的是github的配置，其实gitee的配置也是相似的，这里贴一下官方的教程：<a class="link"   href="https://help.gitee.com/base/account/SSH%E5%85%AC%E9%92%A5%E8%AE%BE%E7%BD%AE"  title="gitee配置ssh key">gitee配置ssh key<i class="fas fa-external-link-alt"></i></a></p>
+<h1 id="3-git工作流程"><a href="#3-git工作流程" class="headerlink" title="3.git工作流程"></a>3.git工作流程</h1><h2 id="3-1-新建项目仓库"><a href="#3-1-新建项目仓库" class="headerlink" title="3.1 新建项目仓库"></a>3.1 新建项目仓库</h2><p>首先在你所在的项目的文件下初始化：<code>git init</code><br>然后提交到暂存区<code>git add .</code><br>然后提交到版本控制区<code>git commit -m &quot;information&quot;</code><br>关联本地仓库与远程仓库（可以在仓库页面看到仓库地址,<strong>前缀是ssh不是https</strong>）：<br><code>git remote add origin https://github.com/xu-xiaoya/Elegent.git</code><br>通过<code>git remote -v</code>查看关联的远程仓库<br>最后就可以推送了，由于新建的远程仓库是空的，所以要加上-u这个参数<br><code>git push -u origin master</code><br>之后仓库不是空的，就不用加上-u，这里的作用是关联仓库，一般只使用一次。<br><code>git push origin master</code>（这里默认的是本地和远程的仓库分支是一样的，都是master)</p>
+<h2 id="3-2-克隆远程仓库"><a href="#3-2-克隆远程仓库" class="headerlink" title="3.2 克隆远程仓库"></a>3.2 克隆远程仓库</h2><p>你可以克隆上传的仓库到本地进行管理和修改:<code>git clone repo</code>（注意是ssh那个链接)<br>此时你的本地仓库自动就关联好了，就可以直接推送了。</p>
+<h2 id="3-3-通过https方式进行推送"><a href="#3-3-通过https方式进行推送" class="headerlink" title="3.3 通过https方式进行推送"></a>3.3 通过https方式进行推送</h2><p>没错，其实除了ssh的方式，还可以通过https的方式进行推送，这就是为什么上面叫你用ssh的方式绑定远程仓库了，如果你想通过https也是可行的，当你推送的时候会弹出身份验证，一般是叫你输入gitee的账号和密码，<strong>github在2022年禁止了这种验证方式</strong>，因此你需要去GitHub设置token才能通过https进行推送。</p>
+<h1 id="4-一些问题的补充"><a href="#4-一些问题的补充" class="headerlink" title="4.一些问题的补充"></a>4.一些问题的补充</h1><h2 id="4-1-连接端口超时"><a href="#4-1-连接端口超时" class="headerlink" title="4.1 连接端口超时"></a>4.1 连接端口超时</h2><p><code>ssh: connect to host github.com port 22: Connection timed out</code><br>当出现如上错误时，可能是由于以下原因：<br>1.自身网络问题，GitHub可能暂时无法连接，建议检查自己的网络，可以ping测试<br>2.网络端口未开放，这种情况需要指定连接的端口，可以指定443端口来试试：<br>编辑或创建~&#x2F;.ssh&#x2F;config文件，添加如下内容：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">Hostname ssh.github.com</span><br><span class="line">Port 443</span><br><span class="line">User git</span><br></pre></td></tr></table></figure>
+<h2 id="4-2-推送报错failed-to-push-some-refs-to-“https-xxxx-git“"><a href="#4-2-推送报错failed-to-push-some-refs-to-“https-xxxx-git“" class="headerlink" title="4.2 推送报错failed to push some refs to “https://xxxx.git“"></a>4.2 推送报错failed to push some refs to “<a class="link"   href="https://xxxx.git/" >https://xxxx.git<i class="fas fa-external-link-alt"></i></a>“</h2><p>出现这种情况，你可以试试拉取仓库内容，先同步一下，再push推送，因为有一种很经典的情况就是远程仓库有README文件，而本地没有，这时就会报错。<br>输入<code>git pull --rebase origin master</code>来同步远程仓库和本地仓库，然后<code>git push</code></p>
 ]]></content>
       <categories>
-        <category>system</category>
+        <category>skills</category>
       </categories>
       <tags>
-        <tag>电脑安全</tag>
-        <tag>工具</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/posts/4a17b156.html</url>
-    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo<i class="fas fa-external-link-alt"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation<i class="fas fa-external-link-alt"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting<i class="fas fa-external-link-alt"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub<i class="fas fa-external-link-alt"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment<i class="fas fa-external-link-alt"></i></a></p>
-]]></content>
-      <categories>
-        <category>dev</category>
-      </categories>
-      <tags>
-        <tag>dev</tag>
-        <tag>hexo</tag>
+        <tag>git</tag>
+        <tag>技能</tag>
       </tags>
   </entry>
   <entry>
@@ -246,78 +260,6 @@
       <tags>
         <tag>linux</tag>
         <tag>操作系统</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>通过git备份和进行迭代项目代码</title>
-    <url>/posts/c9f9f4c7.html</url>
-    <content><![CDATA[<blockquote>
-<p>在本地进行项目开发时，由于代码需要进行多次迭代，因此备份代码是不可缺少的。因此使用版本控制系统来进行代码备份是很有必要的。本文将介绍有关git配置gitee以及github的相关内容，并对一些问题做出相应解释。</p>
-</blockquote>
-<h1 id="1-git工具"><a href="#1-git工具" class="headerlink" title="1.git工具"></a>1.git工具</h1><h2 id="1-1-git介绍"><a href="#1-1-git介绍" class="headerlink" title="1.1 git介绍"></a>1.1 git介绍</h2><p>Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。git可以在多种操作系统中安装。通过git可以在本地新建仓库并与远端仓库进行连接。git在本地的工作流程分为<code>工作区</code> <code>暂存区</code> <code>版本库</code>，通过这三部分可以对项目进行很好的版本控制与代码迭代。</p>
-<h2 id="1-2-git安装"><a href="#1-2-git安装" class="headerlink" title="1.2 git安装"></a>1.2 git安装</h2><p>windows安装教程推荐<a class="link"   href="https://blog.csdn.net/mukes/article/details/115693833" >git详细安装教程<i class="fas fa-external-link-alt"></i></a>，这大概是我见过最详细的教程了。<br><br><br>macOS如果安装 Homebrew，可以通过以下命令来安装：</p>
-<figure class="highlight zsh"><table><tr><td class="code"><pre><span class="line">brew install git</span><br></pre></td></tr></table></figure>
-<p>也可以前往Git官网下载 macOS 版本的安装包并按照说明进行安装。<br><br><br>Linux通过对应的安装包命令进行安装即可，例如:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt install git -y</span><br></pre></td></tr></table></figure>
-<h2 id="1-3-git的简单使用"><a href="#1-3-git的简单使用" class="headerlink" title="1.3 git的简单使用"></a>1.3 git的简单使用</h2><p>git可以通过命令行来进行使用，也可以使用类似<code>Github desktop</code> <code>Git GUI</code>这样的图形化工具来进行使用，推荐先了解了解git的命令再去使用图形化工具，这样可以加深对分布式版本控制系统的理解。git的使用过程不是本文的重点，因此不在此过多赘述，详细的内容推荐通过菜鸟教程网站以及b站相关视频进行学习。<br>简单常用git命令:</p>
-<ul>
-<li>git clone repo</li>
-<li>git add .</li>
-<li>git commit -m ‘information’</li>
-<li>git push origin master</li>
-</ul>
-<h1 id="2-git配置github和gitee"><a href="#2-git配置github和gitee" class="headerlink" title="2.git配置github和gitee"></a>2.git配置github和gitee</h1><h2 id="2-1-设置全局用户名和邮箱"><a href="#2-1-设置全局用户名和邮箱" class="headerlink" title="2.1 设置全局用户名和邮箱"></a>2.1 设置全局用户名和邮箱</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name  &quot;name&quot;//用户名</span><br><span class="line">$ git config --global user.email &quot;xxx@xxx.com&quot;//邮箱</span><br></pre></td></tr></table></figure>
-<p>这里的用户名和邮箱就是你GitHub的，好像也可以不同，不过提交的时候信息可能会出问题</p>
-<h2 id="2-2-创建ssh-key"><a href="#2-2-创建ssh-key" class="headerlink" title="2.2 创建ssh key"></a>2.2 创建ssh key</h2><p>在git bash里面输入如下命令:<br><code>$ ssh-keygen -t rsa -C &quot;xxx@xxx.com&quot;</code><br>邮箱还是对应的上面的邮箱，输入命令后需要连续三次回车，这样可以设置免ssh密码登录</p>
-<h2 id="2-3-在GitHub里面绑定ssh-key"><a href="#2-3-在GitHub里面绑定ssh-key" class="headerlink" title="2.3 在GitHub里面绑定ssh key"></a>2.3 在GitHub里面绑定ssh key</h2><p>上面生成的ssh密钥可以在<code>users/用户名/.ssh</code>文件夹里面找到，点击资源管理器上面的查看显示隐藏文件就可以看到.ssh文件夹了。<br>复制id_rsa.pub里面的内容，打开GitHub，在Account settings页面选择SSH Keys，添加New ssh keys，名称随意，将复制的公钥内容粘贴进去。</p>
-<h2 id="2-4-验证"><a href="#2-4-验证" class="headerlink" title="2.4 验证"></a>2.4 验证</h2><p>输入如下命令验证：<br><code>$ ssh -T git@github.com</code><br>出现提示，输入yes，然后底下出现欢迎信息，即为成功。</p>
-<h2 id="2-5-gitee配置"><a href="#2-5-gitee配置" class="headerlink" title="2.5 gitee配置"></a>2.5 gitee配置</h2><p>上面介绍的是github的配置，其实gitee的配置也是相似的，这里贴一下官方的教程：<a class="link"   href="https://help.gitee.com/base/account/SSH%E5%85%AC%E9%92%A5%E8%AE%BE%E7%BD%AE"  title="gitee配置ssh key">gitee配置ssh key<i class="fas fa-external-link-alt"></i></a></p>
-<h1 id="3-git工作流程"><a href="#3-git工作流程" class="headerlink" title="3.git工作流程"></a>3.git工作流程</h1><h2 id="3-1-新建项目仓库"><a href="#3-1-新建项目仓库" class="headerlink" title="3.1 新建项目仓库"></a>3.1 新建项目仓库</h2><p>首先在你所在的项目的文件下初始化：<code>git init</code><br>然后提交到暂存区<code>git add .</code><br>然后提交到版本控制区<code>git commit -m &quot;information&quot;</code><br>关联本地仓库与远程仓库（可以在仓库页面看到仓库地址,<strong>前缀是ssh不是https</strong>）：<br><code>git remote add origin https://github.com/xu-xiaoya/Elegent.git</code><br>通过<code>git remote -v</code>查看关联的远程仓库<br>最后就可以推送了，由于新建的远程仓库是空的，所以要加上-u这个参数<br><code>git push -u origin master</code><br>之后仓库不是空的，就不用加上-u，这里的作用是关联仓库，一般只使用一次。<br><code>git push origin master</code>（这里默认的是本地和远程的仓库分支是一样的，都是master)</p>
-<h2 id="3-2-克隆远程仓库"><a href="#3-2-克隆远程仓库" class="headerlink" title="3.2 克隆远程仓库"></a>3.2 克隆远程仓库</h2><p>你可以克隆上传的仓库到本地进行管理和修改:<code>git clone repo</code>（注意是ssh那个链接)<br>此时你的本地仓库自动就关联好了，就可以直接推送了。</p>
-<h2 id="3-3-通过https方式进行推送"><a href="#3-3-通过https方式进行推送" class="headerlink" title="3.3 通过https方式进行推送"></a>3.3 通过https方式进行推送</h2><p>没错，其实除了ssh的方式，还可以通过https的方式进行推送，这就是为什么上面叫你用ssh的方式绑定远程仓库了，如果你想通过https也是可行的，当你推送的时候会弹出身份验证，一般是叫你输入gitee的账号和密码，<strong>github在2022年禁止了这种验证方式</strong>，因此你需要去GitHub设置token才能通过https进行推送。</p>
-<h1 id="4-一些问题的补充"><a href="#4-一些问题的补充" class="headerlink" title="4.一些问题的补充"></a>4.一些问题的补充</h1><h2 id="4-1-连接端口超时"><a href="#4-1-连接端口超时" class="headerlink" title="4.1 连接端口超时"></a>4.1 连接端口超时</h2><p><code>ssh: connect to host github.com port 22: Connection timed out</code><br>当出现如上错误时，可能是由于以下原因：<br>1.自身网络问题，GitHub可能暂时无法连接，建议检查自己的网络，可以ping测试<br>2.网络端口未开放，这种情况需要指定连接的端口，可以指定443端口来试试：<br>编辑或创建~&#x2F;.ssh&#x2F;config文件，添加如下内容：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">Hostname ssh.github.com</span><br><span class="line">Port 443</span><br><span class="line">User git</span><br></pre></td></tr></table></figure>
-<h2 id="4-2-推送报错failed-to-push-some-refs-to-“https-xxxx-git“"><a href="#4-2-推送报错failed-to-push-some-refs-to-“https-xxxx-git“" class="headerlink" title="4.2 推送报错failed to push some refs to “https://xxxx.git“"></a>4.2 推送报错failed to push some refs to “<a class="link"   href="https://xxxx.git/" >https://xxxx.git<i class="fas fa-external-link-alt"></i></a>“</h2><p>出现这种情况，你可以试试拉取仓库内容，先同步一下，再push推送，因为有一种很经典的情况就是远程仓库有README文件，而本地没有，这时就会报错。<br>输入<code>git pull --rebase origin master</code>来同步远程仓库和本地仓库，然后<code>git push</code></p>
-]]></content>
-      <categories>
-        <category>skills</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-        <tag>技能</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo后台管理插件hexo-pro</title>
-    <url>/posts/96a7fa15.html</url>
-    <content><![CDATA[<blockquote>
-<p>在静态博客领域，Hexo因其简洁、高效而受到广泛欢迎。然而，随着网站规模的扩展，管理内容和配置变得愈发复杂。如果不能直观的看到博客的具体内容会很耗费时间和精力。此时，一个强大的后台管理插件显得尤为重要。hexo-pro就是其中的一个，它为用户提供了更直观、便捷的管理界面，极大地提升了使用体验。</p>
-</blockquote>
-<h3 id="安装教程"><a href="#安装教程" class="headerlink" title="安装教程"></a>安装教程</h3><p>安装hexo-pro十分简单。请按照以下步骤进行操作：</p>
-<ol>
-<li><strong>确保你已安装Node.js和Hexo</strong>。如果尚未安装，请先访问<a class="link"   href="https://nodejs.org/" >Node.js官网<i class="fas fa-external-link-alt"></i></a>和<a class="link"   href="https://hexo.io/" >Hexo官网<i class="fas fa-external-link-alt"></i></a>进行安装。</li>
-<li><strong>使用npm安装hexo-pro</strong>。在你的Hexo项目目录下，打开命令行并输入以下命令：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-pro</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h3 id="配置教程"><a href="#配置教程" class="headerlink" title="配置教程"></a>配置教程</h3><p>在安装好插件之后，你需要对其进行配置以便适应自己的需求。打开<code>_config.yml</code>文件，并添加以下配置：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">hexo_pro:</span></span><br><span class="line">  <span class="attr">username:</span> <span class="string">admin</span></span><br><span class="line">  <span class="attr">password:</span> <span class="number">123</span></span><br><span class="line">  <span class="attr">avatar: https:</span> <span class="string">image</span> <span class="string">for</span> <span class="string">your</span> <span class="string">own</span> <span class="string">avata</span></span><br><span class="line">  <span class="attr">secret:</span> <span class="string">xxx</span> <span class="string">//</span> <span class="string">jwt</span> <span class="string">secret</span> <span class="string">key</span></span><br></pre></td></tr></table></figure>
-<p>完成配置后，保存文件并重启Hexo服务器。</p>
-<p><strong>启动Hexo服务器</strong>。安装完成后，使用以下命令启动Hexo：<br>   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server -d -p [port]</span><br></pre></td></tr></table></figure></p>
-<h3 id="使用展示"><a href="#使用展示" class="headerlink" title="使用展示"></a>使用展示</h3><p>一旦成功安装并配置hexo-pro，打开本地预览网页，例如’localhost:4000&#x2F;pro’你将看到一个全新的后台管理界面。用户可以通过这个界面轻松管理所有页面、文章以及其他资源。功能包括但不限于：</p>
-<ul>
-<li><strong>新增、编辑和删除文章、页面</strong>：支持Markdown格式，方便写作。</li>
-<li><strong>分类和标签管理</strong>：可以对文章进行分类和标签添加。</li>
-<li><strong>主题插件管理</strong>：方便的主题管理和切换。</li>
-</ul>
-<p>修改后可以预览文章效果，实时查看更改后的样子，极大地提升了写作和管理的便捷性。</p>
-<h3 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h3><p>想要获取更多信息或参与项目，可以访问hexo-pro的GitHub页面：<a class="link"   href="https://github.com/wuzheng228/hexo-pro" >hexo-pro GitHub<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="体验感悟"><a href="#体验感悟" class="headerlink" title="体验感悟"></a>体验感悟</h3><p>经过一段时间的使用，hexo-pro给我带来了极大的便利。其简单直观的界面设计，使得我可以在极短的时间内掌握其基本操作。我特别喜欢实时预览功能，这让我可以更好地把控文章的排版效果。此外，强大的标签管理和主题切换功能，也使得我对文章的管理变得更加灵活。总的来说，hexo-pro是一款值得推荐的Hexo后台管理插件，极大提高了我的工作效率。</p>
-]]></content>
-      <categories>
-        <category>blog</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>开源</tag>
       </tags>
   </entry>
   <entry>
@@ -554,23 +496,57 @@
       </tags>
   </entry>
   <entry>
-    <title>qemu安装Alpine</title>
-    <url>/posts/1486a3ac.html</url>
-    <content><![CDATA[<h3 id="下载镜像"><a href="#下载镜像" class="headerlink" title="下载镜像"></a>下载镜像</h3><p>虚拟机执行如下命令安装镜像，也可以安装新一点的镜像：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget https://mirrors.aliyun.com/alpine/v3.15/releases/x86_64/alpine-extended-3.15.0-x86_64.iso</span><br></pre></td></tr></table></figure>
-<h3 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h3><p>设置镜像：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">qemu-img create -f qcow2 alpine.qcow2 16G</span><br><span class="line">qemu-img convert -f raw -O qcow2 alpine-extended-3.15.0-x86_64.iso alpine.qcow2</span><br><span class="line">qemu-img resize alpine.qcow2 +20G</span><br><span class="line">qemu-system-x86_64 -m 2048 -cdrom alpine.qcow2 -boot d -enable-kvm -vga std -display sdl -usb -usbdevice tablet -net nic,model=virtio -net user,hostfwd=tcp::2222-:22 -vnc :0</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">登录</span></span><br><span class="line">ssh root@127.0.0.1 -p 2222</span><br></pre></td></tr></table></figure>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">apk update</span><br><span class="line">apk add vim</span><br><span class="line">apk add openssh</span><br><span class="line">apk add openssh-server</span><br><span class="line">echo &quot;root:123456&quot; | passwd root</span><br><span class="line">systemctl enable sshd</span><br><span class="line">systemctl start sshd</span><br><span class="line">exit</span><br><span class="line">ssh root@127.0.0.1 -p 2222</span><br></pre></td></tr></table></figure>
-<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat &lt;&lt;EOF &gt; /etc/ssh/sshd_config</span><br><span class="line">Port 22</span><br><span class="line">HostKey /etc/ssh/ssh_host_rsa_key</span><br><span class="line">HostKey /etc/ssh/ssh_host_ecdsa_key</span><br></pre></td></tr></table></figure>
-
-
+    <title>hexon写博客</title>
+    <url>/posts/b675e58e.html</url>
+    <content><![CDATA[<h2 id="Hexo介绍"><a href="#Hexo介绍" class="headerlink" title="Hexo介绍"></a>Hexo介绍</h2><p>作为一个GitHub上面的开源项目，hexon存在的目的便是提升hexo博客的写作体验，因为hexo博客的写作环境和频繁的git命令实在是麻烦，所以有一个本地端口的线上写作环境真的很重要。</p>
+<h2 id="安装方式"><a href="#安装方式" class="headerlink" title="安装方式"></a>安装方式</h2><p>在安装hexon之前，请确保你已经安装了pnpm包管理器，安装指令如下：<br></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install pnpm -g</span><br></pre></td></tr></table></figure>
+<p>然后直接使用git和一系列pnpm指令安装：<br></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/gethexon/hexon --depth 1</span><br><span class="line"><span class="built_in">cd</span> hexon</span><br><span class="line">pnpm install</span><br><span class="line">pnpm run setup</span><br></pre></td></tr></table></figure>
+<p>安装完成之后，会让你设置启动端口和文件路径以及登录的账号信息，根据提示安装即可。<br></p>
+<h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><p>指令：<br></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">start hexon</span><br></pre></td></tr></table></figure>
+<p>可以配置.bat或者.shell脚本文件启动。</p>
 ]]></content>
       <categories>
-        <category>linux</category>
+        <category>blog</category>
       </categories>
       <tags>
-        <tag>操作系统</tag>
-        <tag>qemu</tag>
+        <tag>hexo</tag>
+        <tag>开源</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo后台管理插件hexo-pro</title>
+    <url>/posts/96a7fa15.html</url>
+    <content><![CDATA[<blockquote>
+<p>在静态博客领域，Hexo因其简洁、高效而受到广泛欢迎。然而，随着网站规模的扩展，管理内容和配置变得愈发复杂。如果不能直观的看到博客的具体内容会很耗费时间和精力。此时，一个强大的后台管理插件显得尤为重要。hexo-pro就是其中的一个，它为用户提供了更直观、便捷的管理界面，极大地提升了使用体验。</p>
+</blockquote>
+<h3 id="安装教程"><a href="#安装教程" class="headerlink" title="安装教程"></a>安装教程</h3><p>安装hexo-pro十分简单。请按照以下步骤进行操作：</p>
+<ol>
+<li><strong>确保你已安装Node.js和Hexo</strong>。如果尚未安装，请先访问<a class="link"   href="https://nodejs.org/" >Node.js官网<i class="fas fa-external-link-alt"></i></a>和<a class="link"   href="https://hexo.io/" >Hexo官网<i class="fas fa-external-link-alt"></i></a>进行安装。</li>
+<li><strong>使用npm安装hexo-pro</strong>。在你的Hexo项目目录下，打开命令行并输入以下命令：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-pro</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="配置教程"><a href="#配置教程" class="headerlink" title="配置教程"></a>配置教程</h3><p>在安装好插件之后，你需要对其进行配置以便适应自己的需求。打开<code>_config.yml</code>文件，并添加以下配置：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">hexo_pro:</span></span><br><span class="line">  <span class="attr">username:</span> <span class="string">admin</span></span><br><span class="line">  <span class="attr">password:</span> <span class="number">123</span></span><br><span class="line">  <span class="attr">avatar: https:</span> <span class="string">image</span> <span class="string">for</span> <span class="string">your</span> <span class="string">own</span> <span class="string">avata</span></span><br><span class="line">  <span class="attr">secret:</span> <span class="string">xxx</span> <span class="string">//</span> <span class="string">jwt</span> <span class="string">secret</span> <span class="string">key</span></span><br></pre></td></tr></table></figure>
+<p>完成配置后，保存文件并重启Hexo服务器。</p>
+<p><strong>启动Hexo服务器</strong>。安装完成后，使用以下命令启动Hexo：<br>   <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server -d -p [port]</span><br></pre></td></tr></table></figure></p>
+<h3 id="使用展示"><a href="#使用展示" class="headerlink" title="使用展示"></a>使用展示</h3><p>一旦成功安装并配置hexo-pro，打开本地预览网页，例如’localhost:4000&#x2F;pro’你将看到一个全新的后台管理界面。用户可以通过这个界面轻松管理所有页面、文章以及其他资源。功能包括但不限于：</p>
+<ul>
+<li><strong>新增、编辑和删除文章、页面</strong>：支持Markdown格式，方便写作。</li>
+<li><strong>分类和标签管理</strong>：可以对文章进行分类和标签添加。</li>
+<li><strong>主题插件管理</strong>：方便的主题管理和切换。</li>
+</ul>
+<p>修改后可以预览文章效果，实时查看更改后的样子，极大地提升了写作和管理的便捷性。</p>
+<h3 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h3><p>想要获取更多信息或参与项目，可以访问hexo-pro的GitHub页面：<a class="link"   href="https://github.com/wuzheng228/hexo-pro" >hexo-pro GitHub<i class="fas fa-external-link-alt"></i></a></p>
+<h3 id="体验感悟"><a href="#体验感悟" class="headerlink" title="体验感悟"></a>体验感悟</h3><p>经过一段时间的使用，hexo-pro给我带来了极大的便利。其简单直观的界面设计，使得我可以在极短的时间内掌握其基本操作。我特别喜欢实时预览功能，这让我可以更好地把控文章的排版效果。此外，强大的标签管理和主题切换功能，也使得我对文章的管理变得更加灵活。总的来说，hexo-pro是一款值得推荐的Hexo后台管理插件，极大提高了我的工作效率。</p>
+]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>开源</tag>
       </tags>
   </entry>
   <entry>
@@ -667,24 +643,71 @@
       </tags>
   </entry>
   <entry>
-    <title>hexon写博客</title>
-    <url>/posts/b675e58e.html</url>
-    <content><![CDATA[<h2 id="Hexo介绍"><a href="#Hexo介绍" class="headerlink" title="Hexo介绍"></a>Hexo介绍</h2><p>作为一个GitHub上面的开源项目，hexon存在的目的便是提升hexo博客的写作体验，因为hexo博客的写作环境和频繁的git命令实在是麻烦，所以有一个本地端口的线上写作环境真的很重要。</p>
-<h2 id="安装方式"><a href="#安装方式" class="headerlink" title="安装方式"></a>安装方式</h2><p>在安装hexon之前，请确保你已经安装了pnpm包管理器，安装指令如下：<br></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install pnpm -g</span><br></pre></td></tr></table></figure>
-<p>然后直接使用git和一系列pnpm指令安装：<br></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/gethexon/hexon --depth 1</span><br><span class="line"><span class="built_in">cd</span> hexon</span><br><span class="line">pnpm install</span><br><span class="line">pnpm run setup</span><br></pre></td></tr></table></figure>
-<p>安装完成之后，会让你设置启动端口和文件路径以及登录的账号信息，根据提示安装即可。<br></p>
-<h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><p>指令：<br></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">start hexon</span><br></pre></td></tr></table></figure>
-<p>可以配置.bat或者.shell脚本文件启动。</p>
+    <title>Hello World</title>
+    <url>/posts/4a17b156.html</url>
+    <content><![CDATA[<p>Welcome to <a class="link"   href="https://hexo.io/" >Hexo<i class="fas fa-external-link-alt"></i></a>! This is your very first post. Check <a class="link"   href="https://hexo.io/docs/" >documentation<i class="fas fa-external-link-alt"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   href="https://hexo.io/docs/troubleshooting.html" >troubleshooting<i class="fas fa-external-link-alt"></i></a> or you can ask me on <a class="link"   href="https://github.com/hexojs/hexo/issues" >GitHub<i class="fas fa-external-link-alt"></i></a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/writing.html" >Writing<i class="fas fa-external-link-alt"></i></a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/server.html" >Server<i class="fas fa-external-link-alt"></i></a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/generating.html" >Generating<i class="fas fa-external-link-alt"></i></a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a class="link"   href="https://hexo.io/docs/one-command-deployment.html" >Deployment<i class="fas fa-external-link-alt"></i></a></p>
 ]]></content>
       <categories>
-        <category>blog</category>
+        <category>dev</category>
       </categories>
       <tags>
         <tag>hexo</tag>
-        <tag>开源</tag>
+        <tag>dev</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>qemu安装Alpine</title>
+    <url>/posts/1486a3ac.html</url>
+    <content><![CDATA[<h3 id="下载镜像"><a href="#下载镜像" class="headerlink" title="下载镜像"></a>下载镜像</h3><p>虚拟机执行如下命令安装镜像，也可以安装新一点的镜像：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget https://mirrors.aliyun.com/alpine/v3.15/releases/x86_64/alpine-extended-3.15.0-x86_64.iso</span><br></pre></td></tr></table></figure>
+<h3 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h3><p>设置镜像：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">qemu-img create -f qcow2 alpine.qcow2 16G</span><br><span class="line">qemu-img convert -f raw -O qcow2 alpine-extended-3.15.0-x86_64.iso alpine.qcow2</span><br><span class="line">qemu-img resize alpine.qcow2 +20G</span><br><span class="line">qemu-system-x86_64 -m 2048 -cdrom alpine.qcow2 -boot d -enable-kvm -vga std -display sdl -usb -usbdevice tablet -net nic,model=virtio -net user,hostfwd=tcp::2222-:22 -vnc :0</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">登录</span></span><br><span class="line">ssh root@127.0.0.1 -p 2222</span><br></pre></td></tr></table></figure>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">apk update</span><br><span class="line">apk add vim</span><br><span class="line">apk add openssh</span><br><span class="line">apk add openssh-server</span><br><span class="line">echo &quot;root:123456&quot; | passwd root</span><br><span class="line">systemctl enable sshd</span><br><span class="line">systemctl start sshd</span><br><span class="line">exit</span><br><span class="line">ssh root@127.0.0.1 -p 2222</span><br></pre></td></tr></table></figure>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat &lt;&lt;EOF &gt; /etc/ssh/sshd_config</span><br><span class="line">Port 22</span><br><span class="line">HostKey /etc/ssh/ssh_host_rsa_key</span><br><span class="line">HostKey /etc/ssh/ssh_host_ecdsa_key</span><br></pre></td></tr></table></figure>
+
+
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+        <tag>qemu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>termux docker</title>
+    <url>/posts/e344457.html</url>
+    <content><![CDATA[<h3 id="操作前提"><a href="#操作前提" class="headerlink" title="操作前提"></a>操作前提</h3><p>由于大部分手机的内核并不满足使用docker的要求，因此需要用root权限修改手机部分kernel来满足，但是手机root并不适用所有手机，而且root也有一定的风险，因此使用termux终端来通过qemu虚拟机进行容器化操作可以实现满足docker运行的要求。</p>
+<h3 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h3><ol>
+<li>安装termux或者zerotermux或者其他类似终端<br>该软件作为开源项目可从github或gitee等网站进行下载</li>
+<li>安装qemu虚拟机<br>进入termux终端后进行换源并安装qemu套件<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed -i <span class="string">&#x27;s@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/termux-packages-24 stable main@&#x27;</span> <span class="variable">$PREFIX</span>/etc/apt/sources.list</span><br><span class="line">apt update &amp;&amp; apt upgrade</span><br><span class="line">apt install qemu*</span><br><span class="line">wget https://mirrors.aliyun.com/alpine/v3.15/releases/x86_64/alpine-extended-3.15.0-x86_64.iso</span><br></pre></td></tr></table></figure></li>
+<li>创建虚拟磁盘并安装alpine虚拟机<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> alpine &amp;&amp; <span class="built_in">cd</span> alpine</span><br><span class="line">qemu-img create -f qcow2 alpine.qcow2 50G</span><br><span class="line">qemu-system-x86_64 -smp 2 -m 2048 \</span><br><span class="line">  -drive file=alpine.qcow2,<span class="keyword">if</span>=virtio \</span><br><span class="line">  -netdev user,<span class="built_in">id</span>=n1,hostfwd=tcp::2222-:22 \</span><br><span class="line">  -device virtio-net,netdev=n1 \</span><br><span class="line">  -cdrom alpine-virt-3.15.0-x86_64.iso -boot d \</span><br><span class="line">  -nographic</span><br></pre></td></tr></table></figure>
+<em>此时进入alpine安装过程，建议参考官方wiki：</em><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://wiki.alpinelinux.org/wiki/Install_Alpine_on_VMware_Workstation</span><br><span class="line">https://wiki.alpinelinux.org/wiki/Installing_Alpine_in_a_virtual_machine</span><br></pre></td></tr></table></figure></li>
+<li>编写开机脚本<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nano run.sh</span><br></pre></td></tr></table></figure>
+填入以下内容：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">qemu-system-x86_64 -smp 2 -m 2048 \</span><br><span class="line">  -drive file=alpine.qcow2,<span class="keyword">if</span>=virtio \</span><br><span class="line">  -netdev user,<span class="built_in">id</span>=n1,hostfwd=tcp::2222-:22 \</span><br><span class="line">  -device virtio-net,netdev=n1 \</span><br><span class="line">  -nographic</span><br></pre></td></tr></table></figure></li>
+<li>重启虚拟机并安装docker<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">bash run.sh</span><br><span class="line">apk add docker &amp;&amp; apk add docker-compose</span><br><span class="line">service docker start</span><br><span class="line">rc-update add docker boot</span><br><span class="line">docker run hello-world</span><br></pre></td></tr></table></figure>
+至此，可以愉快的使用docker了</li>
+</ol>
+<h3 id="反思与总结"><a href="#反思与总结" class="headerlink" title="反思与总结"></a>反思与总结</h3><p>我本人尝试了许多次手机安装docker的操作，这种借助qemu虚拟机的方法十分局限，因为qemu无法调用kvm，所以十分卡顿，建议仅作为一种尝试，并不建议日常使用</p>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>termux</tag>
       </tags>
   </entry>
   <entry>
@@ -978,29 +1001,6 @@
       </tags>
   </entry>
   <entry>
-    <title>termux docker</title>
-    <url>/posts/e344457.html</url>
-    <content><![CDATA[<h3 id="操作前提"><a href="#操作前提" class="headerlink" title="操作前提"></a>操作前提</h3><p>由于大部分手机的内核并不满足使用docker的要求，因此需要用root权限修改手机部分kernel来满足，但是手机root并不适用所有手机，而且root也有一定的风险，因此使用termux终端来通过qemu虚拟机进行容器化操作可以实现满足docker运行的要求。</p>
-<h3 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h3><ol>
-<li>安装termux或者zerotermux或者其他类似终端<br>该软件作为开源项目可从github或gitee等网站进行下载</li>
-<li>安装qemu虚拟机<br>进入termux终端后进行换源并安装qemu套件<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sed -i <span class="string">&#x27;s@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/termux-packages-24 stable main@&#x27;</span> <span class="variable">$PREFIX</span>/etc/apt/sources.list</span><br><span class="line">apt update &amp;&amp; apt upgrade</span><br><span class="line">apt install qemu*</span><br><span class="line">wget https://mirrors.aliyun.com/alpine/v3.15/releases/x86_64/alpine-extended-3.15.0-x86_64.iso</span><br></pre></td></tr></table></figure></li>
-<li>创建虚拟磁盘并安装alpine虚拟机<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> alpine &amp;&amp; <span class="built_in">cd</span> alpine</span><br><span class="line">qemu-img create -f qcow2 alpine.qcow2 50G</span><br><span class="line">qemu-system-x86_64 -smp 2 -m 2048 \</span><br><span class="line">  -drive file=alpine.qcow2,<span class="keyword">if</span>=virtio \</span><br><span class="line">  -netdev user,<span class="built_in">id</span>=n1,hostfwd=tcp::2222-:22 \</span><br><span class="line">  -device virtio-net,netdev=n1 \</span><br><span class="line">  -cdrom alpine-virt-3.15.0-x86_64.iso -boot d \</span><br><span class="line">  -nographic</span><br></pre></td></tr></table></figure>
-<em>此时进入alpine安装过程，建议参考官方wiki：</em><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://wiki.alpinelinux.org/wiki/Install_Alpine_on_VMware_Workstation</span><br><span class="line">https://wiki.alpinelinux.org/wiki/Installing_Alpine_in_a_virtual_machine</span><br></pre></td></tr></table></figure></li>
-<li>编写开机脚本<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nano run.sh</span><br></pre></td></tr></table></figure>
-填入以下内容：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">qemu-system-x86_64 -smp 2 -m 2048 \</span><br><span class="line">  -drive file=alpine.qcow2,<span class="keyword">if</span>=virtio \</span><br><span class="line">  -netdev user,<span class="built_in">id</span>=n1,hostfwd=tcp::2222-:22 \</span><br><span class="line">  -device virtio-net,netdev=n1 \</span><br><span class="line">  -nographic</span><br></pre></td></tr></table></figure></li>
-<li>重启虚拟机并安装docker<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">bash run.sh</span><br><span class="line">apk add docker &amp;&amp; apk add docker-compose</span><br><span class="line">service docker start</span><br><span class="line">rc-update add docker boot</span><br><span class="line">docker run hello-world</span><br></pre></td></tr></table></figure>
-至此，可以愉快的使用docker了</li>
-</ol>
-<h3 id="反思与总结"><a href="#反思与总结" class="headerlink" title="反思与总结"></a>反思与总结</h3><p>我本人尝试了许多次手机安装docker的操作，这种借助qemu虚拟机的方法十分局限，因为qemu无法调用kvm，所以十分卡顿，建议仅作为一种尝试，并不建议日常使用</p>
-]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>termux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>服务器重装后配置环境</title>
     <url>/posts/d43bf55a.html</url>
     <content><![CDATA[<h3 id="1-换源"><a href="#1-换源" class="headerlink" title="1. 换源"></a>1. 换源</h3><p>要在Debian系统中将APT源更换为USTC镜像，可以按照以下详细步骤进行操作：</p>
@@ -1151,6 +1151,40 @@
       </tags>
   </entry>
   <entry>
+    <title>内存解决</title>
+    <url>/posts/5e03229e.html</url>
+    <content><![CDATA[<h3 id="服务器内存爆满的解决办法"><a href="#服务器内存爆满的解决办法" class="headerlink" title="服务器内存爆满的解决办法"></a>服务器内存爆满的解决办法</h3><blockquote>
+<p>由于我们购买的服务器或者挂机宝在一些情况下，配置很低。基本上都是1核1G的，1G的内存对于想要部署多个服务的我们肯定不够用，解决内存爆红十分有必要，下面是我的一些整理核总结，关于如何缓解内存问题</p>
+</blockquote>
+<h4 id="1-虚拟内存"><a href="#1-虚拟内存" class="headerlink" title="1. 虚拟内存"></a>1. 虚拟内存</h4><p>在大多数情况下，我们的内存很小，但是硬盘容量却相对宽裕，利用这一点，我们可以牺牲一部分硬盘容量来作为虚拟内存分配给我们的服务器使用，虚拟内存一般为真实内存的1.5到2倍比较合适，由于内存调用的先后顺序，一般是真实内存几乎消耗完的时候才开始全面调用虚拟内存，因此，虚拟内存的使用可能会使主机变的没那么流畅，但是却也避免了爆内存的情况，绝大部分小内存vps或者挂机宝都使用了这一技术。</p>
+<h4 id="2-留出一块空间避免死机"><a href="#2-留出一块空间避免死机" class="headerlink" title="2. 留出一块空间避免死机"></a>2. 留出一块空间避免死机</h4><p>设定Linux内存参数，始终留出一块空间，以避免缓存不释放导致死机。<br>方案一：可手动清理页文件缓存，但是需手动执行；</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">echo  1  &gt;  /pron/sys/vm/drop_caches</span><br></pre></td></tr></table></figure>
+<p>方案二：我们采用的方法是设定内存最低剩余内存，不让缓存占满</p>
+<h5 id="1-使用root用户备份-etc-sysctl-conf文件，准备修改原文件；"><a href="#1-使用root用户备份-etc-sysctl-conf文件，准备修改原文件；" class="headerlink" title="1.使用root用户备份&#x2F;etc&#x2F;sysctl.conf文件，准备修改原文件；"></a>1.使用root用户备份&#x2F;etc&#x2F;sysctl.conf文件，准备修改原文件；</h5><h5 id="2-修改sysctl-conf配置文件"><a href="#2-修改sysctl-conf配置文件" class="headerlink" title="2.修改sysctl.conf配置文件"></a>2.修改sysctl.conf配置文件</h5><h6 id="2-1-打开sysctl-conf"><a href="#2-1-打开sysctl-conf" class="headerlink" title="2.1 打开sysctl.conf"></a>2.1 打开sysctl.conf</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/sysctl.conf</span><br></pre></td></tr></table></figure>
+<h6 id="2-2-在文件最后加入一行："><a href="#2-2-在文件最后加入一行：" class="headerlink" title="2.2 在文件最后加入一行："></a>2.2 在文件最后加入一行：</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vm.min_free_kbytes = 2097152</span><br></pre></td></tr></table></figure>
+<p>（意义：设置最小剩余内存，单位KB，这里设置2G）</p>
+<h6 id="2-3-保存退出-使配置文件生效"><a href="#2-3-保存退出-使配置文件生效" class="headerlink" title="2.3 保存退出,使配置文件生效"></a>2.3 保存退出,使配置文件生效</h6><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sysctl  -p</span><br></pre></td></tr></table></figure>
+<p>由于第一种方法属于直接清空缓存，可能会造成数据丢失，方案二更佳。</p>
+<h4 id="3-解决异常进程"><a href="#3-解决异常进程" class="headerlink" title="3. 解决异常进程"></a>3. 解决异常进程</h4><blockquote>
+<p>内存持续飙升，可能是有大量内存一直没有释放，考虑僵尸对象，僵尸进程，最简单的就是重启服务器，但是就无法找到罪魁祸首了。</p>
+</blockquote>
+<p>top命令查看活跃进程的资源使用情况。（<em>top命令是Linux下常用的性能分析工具，能够实时显示系统中各个进程的资源占用状况，类似于Windows的任务管理器。</em>）<br>ps -aux 查看当前系统的进程状态。</p>
+<h4 id="4-ps"><a href="#4-ps" class="headerlink" title="4. ps"></a>4. ps</h4><p>本文引用了两篇文章：</p>
+<ul>
+<li><a class="link"   href="https://cloud.tencent.com/developer/article/1858898" >范一刀的文章<i class="fas fa-external-link-alt"></i></a></li>
+<li><a class="link"   href="https://www.cnblogs.com/peteremperor/p/11248807.html" >Mr.peter的文章<i class="fas fa-external-link-alt"></i></a></li>
+</ul>
+<h5 id="侵删说明"><a href="#侵删说明" class="headerlink" title="侵删说明"></a>侵删说明</h5><p>如果文章有侵权行为，请联系作者立刻删除相关内容</p>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+        <tag>运维</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>zsh美化教程</title>
     <url>/posts/ecc5fe2a.html</url>
     <content><![CDATA[<h2 id="zsh美化教程"><a href="#zsh美化教程" class="headerlink" title="zsh美化教程"></a>zsh美化教程</h2><h3 id="debian安装zsh并配置"><a href="#debian安装zsh并配置" class="headerlink" title="debian安装zsh并配置"></a>debian安装zsh并配置</h3><ul>
@@ -1211,40 +1245,6 @@
       <tags>
         <tag>jekll</tag>
         <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>内存解决</title>
-    <url>/posts/5e03229e.html</url>
-    <content><![CDATA[<h3 id="服务器内存爆满的解决办法"><a href="#服务器内存爆满的解决办法" class="headerlink" title="服务器内存爆满的解决办法"></a>服务器内存爆满的解决办法</h3><blockquote>
-<p>由于我们购买的服务器或者挂机宝在一些情况下，配置很低。基本上都是1核1G的，1G的内存对于想要部署多个服务的我们肯定不够用，解决内存爆红十分有必要，下面是我的一些整理核总结，关于如何缓解内存问题</p>
-</blockquote>
-<h4 id="1-虚拟内存"><a href="#1-虚拟内存" class="headerlink" title="1. 虚拟内存"></a>1. 虚拟内存</h4><p>在大多数情况下，我们的内存很小，但是硬盘容量却相对宽裕，利用这一点，我们可以牺牲一部分硬盘容量来作为虚拟内存分配给我们的服务器使用，虚拟内存一般为真实内存的1.5到2倍比较合适，由于内存调用的先后顺序，一般是真实内存几乎消耗完的时候才开始全面调用虚拟内存，因此，虚拟内存的使用可能会使主机变的没那么流畅，但是却也避免了爆内存的情况，绝大部分小内存vps或者挂机宝都使用了这一技术。</p>
-<h4 id="2-留出一块空间避免死机"><a href="#2-留出一块空间避免死机" class="headerlink" title="2. 留出一块空间避免死机"></a>2. 留出一块空间避免死机</h4><p>设定Linux内存参数，始终留出一块空间，以避免缓存不释放导致死机。<br>方案一：可手动清理页文件缓存，但是需手动执行；</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">echo  1  &gt;  /pron/sys/vm/drop_caches</span><br></pre></td></tr></table></figure>
-<p>方案二：我们采用的方法是设定内存最低剩余内存，不让缓存占满</p>
-<h5 id="1-使用root用户备份-etc-sysctl-conf文件，准备修改原文件；"><a href="#1-使用root用户备份-etc-sysctl-conf文件，准备修改原文件；" class="headerlink" title="1.使用root用户备份&#x2F;etc&#x2F;sysctl.conf文件，准备修改原文件；"></a>1.使用root用户备份&#x2F;etc&#x2F;sysctl.conf文件，准备修改原文件；</h5><h5 id="2-修改sysctl-conf配置文件"><a href="#2-修改sysctl-conf配置文件" class="headerlink" title="2.修改sysctl.conf配置文件"></a>2.修改sysctl.conf配置文件</h5><h6 id="2-1-打开sysctl-conf"><a href="#2-1-打开sysctl-conf" class="headerlink" title="2.1 打开sysctl.conf"></a>2.1 打开sysctl.conf</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/sysctl.conf</span><br></pre></td></tr></table></figure>
-<h6 id="2-2-在文件最后加入一行："><a href="#2-2-在文件最后加入一行：" class="headerlink" title="2.2 在文件最后加入一行："></a>2.2 在文件最后加入一行：</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vm.min_free_kbytes = 2097152</span><br></pre></td></tr></table></figure>
-<p>（意义：设置最小剩余内存，单位KB，这里设置2G）</p>
-<h6 id="2-3-保存退出-使配置文件生效"><a href="#2-3-保存退出-使配置文件生效" class="headerlink" title="2.3 保存退出,使配置文件生效"></a>2.3 保存退出,使配置文件生效</h6><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sysctl  -p</span><br></pre></td></tr></table></figure>
-<p>由于第一种方法属于直接清空缓存，可能会造成数据丢失，方案二更佳。</p>
-<h4 id="3-解决异常进程"><a href="#3-解决异常进程" class="headerlink" title="3. 解决异常进程"></a>3. 解决异常进程</h4><blockquote>
-<p>内存持续飙升，可能是有大量内存一直没有释放，考虑僵尸对象，僵尸进程，最简单的就是重启服务器，但是就无法找到罪魁祸首了。</p>
-</blockquote>
-<p>top命令查看活跃进程的资源使用情况。（<em>top命令是Linux下常用的性能分析工具，能够实时显示系统中各个进程的资源占用状况，类似于Windows的任务管理器。</em>）<br>ps -aux 查看当前系统的进程状态。</p>
-<h4 id="4-ps"><a href="#4-ps" class="headerlink" title="4. ps"></a>4. ps</h4><p>本文引用了两篇文章：</p>
-<ul>
-<li><a class="link"   href="https://cloud.tencent.com/developer/article/1858898" >范一刀的文章<i class="fas fa-external-link-alt"></i></a></li>
-<li><a class="link"   href="https://www.cnblogs.com/peteremperor/p/11248807.html" >Mr.peter的文章<i class="fas fa-external-link-alt"></i></a></li>
-</ul>
-<h5 id="侵删说明"><a href="#侵删说明" class="headerlink" title="侵删说明"></a>侵删说明</h5><p>如果文章有侵权行为，请联系作者立刻删除相关内容</p>
-]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>操作系统</tag>
-        <tag>运维</tag>
       </tags>
   </entry>
 </search>
